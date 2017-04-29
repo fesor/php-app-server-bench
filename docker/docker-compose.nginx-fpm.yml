@@ -1,0 +1,11 @@
+version: "2"
+
+services:
+  app:
+    image: php:7.1-fpm
+    extends:
+      file: docker-compose.app.yml
+      service: symfony
+
+  nginx:
+    image: nginx:alpine

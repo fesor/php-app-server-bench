@@ -1,0 +1,12 @@
+version: "2"
+
+services:
+  app:
+    image: devtheops/php7-uwsgi:latest
+    extends:
+      file: docker-compose.app.yml
+      service: symfony
+    volumes:
+      - '../.:/var/www/public'
+    ports:
+      - "8090:8080"

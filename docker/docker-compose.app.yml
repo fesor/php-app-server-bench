@@ -1,0 +1,10 @@
+# This file contains base service definitions
+# which could be extended per environment
+
+version: "2"
+
+services:
+  symfony:
+    environment:
+      - SYMFONY_ENV
+      - SYMFONY__SECRET=${SECRET}

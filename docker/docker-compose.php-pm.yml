@@ -1,0 +1,12 @@
+version: "2"
+
+services:
+  app:
+    build: php-pm
+    extends:
+      file: docker-compose.app.yml
+      service: symfony
+    volumes:
+      - '../.:/app'
+    ports:
+      - "8090:8080"
